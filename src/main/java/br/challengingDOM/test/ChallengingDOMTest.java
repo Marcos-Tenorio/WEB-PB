@@ -19,14 +19,11 @@ import static br.challengingDOM.core.DriverFactory.getDriver;
 
 public class ChallengingDOMTest extends BaseTest {
 
-
-    private BasePage dsl;
     private ChallengingDOMPage challengingDOMPage;
 
     @Before
     public void inicializaDriver() {
         challengingDOMPage = new ChallengingDOMPage();
-        dsl = new BasePage();//Retirar uso do teste looping actions
     }
 
     @Test
@@ -55,7 +52,7 @@ public class ChallengingDOMTest extends BaseTest {
 
         WebElement tabela = challengingDOMPage.getTabela();
 
-        int i = dsl.obterIndiceColunaAction(tabela.findElements(By.xpath(".//thead/tr/th")));
+        int i = challengingDOMPage.obterIndiceColunaAction(tabela.findElements(By.xpath(".//thead/tr/th")));
 
         List<WebElement> linhas = tabela.findElements(By.xpath(".//tbody/tr"));
 

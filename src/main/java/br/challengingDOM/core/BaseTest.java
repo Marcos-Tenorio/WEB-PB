@@ -1,7 +1,6 @@
 package br.challengingDOM.core;
 
 import br.challengingDOM.page.ChallengingDOMPage;
-import br.challengingDOM.test.ChallengingDOMTest;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;

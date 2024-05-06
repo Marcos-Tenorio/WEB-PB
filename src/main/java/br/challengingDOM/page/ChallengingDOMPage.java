@@ -4,6 +4,8 @@ import br.challengingDOM.core.BasePage;
 import br.challengingDOM.core.DriverFactory;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 import static br.challengingDOM.core.DriverFactory.getDriver;
 
 
@@ -30,6 +32,9 @@ public class ChallengingDOMPage extends BasePage {
 
     public WebElement getTabela(){
         return obterTabela("//*[@id=\"content\"]/div/div/div/div[2]/table");
+    }
+    public int obterIndiceColunaAction(List<WebElement> colunas){
+        return obterIndiceColuna(colunas, "Action");
     }
 
 }
